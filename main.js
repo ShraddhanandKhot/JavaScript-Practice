@@ -59,3 +59,105 @@ console.log(person.hobbies[1]);
 console.log(person.address.City);
 console.log(JSON.stringify(person));
 
+//loops 
+for(let i =0 ; i<=10; i++)
+{
+    if( i % 2 != 0)
+    {
+        continue;
+    }
+    
+    console.log(i);
+}
+ console.log("______________________________");
+i = 10
+while(i >=0)
+{
+    console.log(i);
+    i--;
+}
+
+const MyTask = [
+    {
+        id : 1, 
+        task: "program 1",
+        isCompleted : true
+    },
+    {
+        id : 2, 
+        task: "writing mail",
+        isCompleted : false
+    },
+     {
+        id : 3, 
+        task: "Complete the assignment",
+        isCompleted : false
+    }
+];
+
+for(let i =0; i< MyTask.length; i++)
+{
+    console.log(MyTask[i].task);
+}
+for(let task of MyTask)
+{
+    console.log(task.isCompleted);
+}
+//forEach
+MyTask.forEach(function(t)
+{
+    console.log(t);
+});
+//map
+console.log("_________________");
+MyTask.map(function(t)
+{
+    console.log(t.task);
+});
+console.log("_ _ _ _ _ _ _ _ _ _ _ ");
+// filter
+MyTask.filter(function(t)
+{
+    console.log(t);
+});
+
+// control statements
+const  x= 1;
+const color = x > 9 ? 'red' : 'yellow';
+console.log(color);
+
+switch(color)
+{
+    case 'red' : 
+        console.log("COLOR IS RED");
+        break;
+    case 'yellow' : 
+        console.log("COLOR IS yellow");
+        break;
+    default:
+         console.log("COLOR IS default");
+        break;
+    
+}
+
+//functions
+const now = new Date()
+console.log(now.getHours() +":"+ now.getMinutes());
+const time = now.getHours();
+
+function Greet()
+{
+  if ( time >=0 && time <12)
+  {
+    console.log("Good Morning");
+  }
+  else if(time >=12 && time < 16)
+  {
+      console.log("Good Afternoon");
+  }
+  else{
+    console.log("Good Eveining");
+  }
+  
+}
+Greet();
