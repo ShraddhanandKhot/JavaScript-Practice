@@ -161,3 +161,36 @@ function Greet()
   
 }
 Greet();
+//constructor function 
+function college(clgname,clgaddress,estyear)
+{
+    this.clgaddress= clgaddress;
+    this.clgname = clgname;
+    this.estyear =new Date(estyear)
+
+ this.getEstablishYear = function(){
+    return this.estyear.getFullYear();
+ }
+ 
+}
+college.prototype.getfullnameadd = function()
+ {
+    return `${this.clgname} ${this.clgaddress}`;
+ }
+
+const clg1 = new college("BMSIT","Yelhanka,Bengaluru",'1-1-2002');
+console.log(clg1.getEstablishYear());
+console.log(clg1);
+
+
+// class
+class Myclg{
+    constructor(name , lname)
+    {
+        this.name =name;
+        this.lname = lname;
+    }
+    
+}
+const clgg = new Myclg("Skk","Khot");
+console.log(clgg.name);
