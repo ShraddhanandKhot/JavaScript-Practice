@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <style>
+            .container
+            {
+                height:35%;
+                width:20%;
+                background-color:#d6cab8;
+                position:absolute;
+                left:40%;
+                top:20%;
+                border-radius:5px;
+            }
+            ul{
+               list-style :none;s
+            }
+             ul li{
+              padding: 5px;
+              background: #d6cab8;
+              margin :5px 0;
+              border-radius:5px;
+
+            }
+            .lists
+            {
+                position:absolute;
+                left:35%;
+                top:60%;
+                
+
+            }
+           
+           .container:hover{
+             box-shadow:12px 12px 12px 12px #deddddff;
+           
+           }
+            .contain1{
+                position :relative;
+                left:20%;
+            }
+            #name{
+                width:100px;
+                border-radius:5px;
+
+            }
+            #email{
+                width:100px;
+                 border-radius:5px;
+
+            }
+            #bt{
+                background-color:#1E90FF;
+                width:143px;
+                border-radius:5px;
+                color:white;
+                border-color:#1E90FF;
+            }
+        </style>
+              
+    </head>
+   
+    <body>
+     <section class="form">
+        <div class ="container">
+            <div class="contain1">
+        <h1>
+            Simple form
+        </h1>
+        <p class ="msg"></p>
+        <label>Name</label>
+        <input type ="text" id ="name">
+        <br><br>
+        <label>Email</label>
+        <input type ="email" id ="email">
+        <br>
+        <br>
+        <input type ="submit" value="Submit" id="bt" onclick="onSubmit()">
+    </div>
+    </div>
+    <div class="lists">
+        <ul id="userlist">
+      
+        </ul>
+    </div>
+</section>
+    <script src ="main.js"> </script>
+    </body>
+    </html>
