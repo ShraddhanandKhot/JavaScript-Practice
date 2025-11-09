@@ -194,3 +194,34 @@ class Myclg{
 }
 const clgg = new Myclg("Skk","Khot");
 console.log(clgg.name);
+
+//_______________
+const userinfolist = document.querySelector(".form");
+const username = document.querySelector("#name");
+const email = document.querySelector("#email");
+const msg = document.querySelector(".msg")
+const bt =  document.querySelector("#bt");
+const userlist = document.querySelector("#userlist");
+
+//bt.addEventListener('click', onSubmit(e));
+const uname = document.getElementById("name").value;
+const uemail = document.getElementById("email").value;
+
+function onSubmit()
+{
+   // e.preventDefault();
+    if(username.value === ""|| email.value ==="")
+    {
+        msg.innerHTML="Enter all values";
+        setTimeout(()=>msg.remove(),3000);
+    }
+    else{
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${username.value} : ${email.value}`));
+
+        userlist.appendChild(li);
+
+         username.value="";
+         email.value ="";
+    }
+}
